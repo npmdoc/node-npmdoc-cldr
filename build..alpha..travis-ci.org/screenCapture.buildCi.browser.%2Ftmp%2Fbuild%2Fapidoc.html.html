@@ -1,0 +1,863 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/papandreou/node-cldr#readme">cldr (v4.2.0)</a>
+</h1>
+<h4>Library for extracting data from CLDR (the Unicode Common Locale Data Repository)</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr">module cldr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRule">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRule
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRuleSet">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRuleSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrRbnfRuleSet">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrRbnfRuleSet
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.load">
+            function <span class="apidocSignatureSpan">cldr.</span>load
+            <span class="apidocSignatureSpan">(cldrPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>CldrPluralRule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>CldrPluralRuleSet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>CldrRbnfRuleSet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>cldrPluralRuleTermFunctionByName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>documentByFileName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cldr.</span>memoizerByFileName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cldr.</span>cldrPath</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrPluralRule">module cldr.CldrPluralRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRule.CldrPluralRule">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRule
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrPluralRule.prototype">module cldr.CldrPluralRule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRule.prototype.eachNode">
+            function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>eachNode
+            <span class="apidocSignatureSpan">(lambda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRule.prototype.toJavaScriptAst">
+            function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>toJavaScriptAst
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRule.prototype.updateIsUsedByTerm">
+            function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>updateIsUsedByTerm
+            <span class="apidocSignatureSpan">(isUsedByTerm)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrPluralRuleSet">module cldr.CldrPluralRuleSet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRuleSet.CldrPluralRuleSet">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRuleSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrPluralRuleSet.prototype">module cldr.CldrPluralRuleSet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRuleSet.prototype.addRule">
+            function <span class="apidocSignatureSpan">cldr.CldrPluralRuleSet.prototype.</span>addRule
+            <span class="apidocSignatureSpan">(cldrPluralRule, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrPluralRuleSet.prototype.toJavaScriptFunctionBodyAst">
+            function <span class="apidocSignatureSpan">cldr.CldrPluralRuleSet.prototype.</span>toJavaScriptFunctionBodyAst
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrRbnfRuleSet">module cldr.CldrRbnfRuleSet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrRbnfRuleSet.CldrRbnfRuleSet">
+            function <span class="apidocSignatureSpan">cldr.</span>CldrRbnfRuleSet
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrRbnfRuleSet.getSafeRendererName">
+            function <span class="apidocSignatureSpan">cldr.CldrRbnfRuleSet.</span>getSafeRendererName
+            <span class="apidocSignatureSpan">(rendererName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.CldrRbnfRuleSet.prototype">module cldr.CldrRbnfRuleSet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.CldrRbnfRuleSet.prototype.toFunctionAst">
+            function <span class="apidocSignatureSpan">cldr.CldrRbnfRuleSet.prototype.</span>toFunctionAst
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cldr.cldrPluralRuleTermFunctionByName">module cldr.cldrPluralRuleTermFunctionByName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.f">
+            function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>f
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.i">
+            function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>i
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.t">
+            function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>t
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.v">
+            function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>v
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.w">
+            function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>w
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr" id="apidoc.module.cldr">module cldr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRule" id="apidoc.element.cldr.CldrPluralRule">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRule
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrPluralRule(src) {
+    this.topLevelNode = parser.parse(src.replace(/^\s+|\s+$/g, '').replace(/\s{2,}/g, ' '));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRuleSet" id="apidoc.element.cldr.CldrPluralRuleSet">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRuleSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrPluralRuleSet() {
+    this.cldrPluralRuleByCount = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrRbnfRuleSet" id="apidoc.element.cldr.CldrRbnfRuleSet">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrRbnfRuleSet
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrRbnfRuleSet(config) {
+    _.extend(this, config);
+    this.ruleByValue = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.load" id="apidoc.element.cldr.load">
+        function <span class="apidocSignatureSpan">cldr.</span>load
+        <span class="apidocSignatureSpan">(cldrPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (cldrPath) {
+    return new Cldr(cldrPath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  ZZ: 'rÃ©gion indÃ©terminÃ©e' }
+```
+
+Advanced users can also provide the path to another CLDR installation
+like this:
+
+```javascript
+var cldr = require('cldr').<span class="apidocCodeKeywordSpan">load</span>('/path/to/cldr');
+```
+
+Properties
+==========
+
+### cldr.localeIds ###
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrPluralRule" id="apidoc.module.cldr.CldrPluralRule">module cldr.CldrPluralRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRule.CldrPluralRule" id="apidoc.element.cldr.CldrPluralRule.CldrPluralRule">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRule
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrPluralRule(src) {
+    this.topLevelNode = parser.parse(src.replace(/^\s+|\s+$/g, '').replace(/\s{2,}/g, ' '));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrPluralRule.prototype" id="apidoc.module.cldr.CldrPluralRule.prototype">module cldr.CldrPluralRule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRule.prototype.eachNode" id="apidoc.element.cldr.CldrPluralRule.prototype.eachNode">
+        function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>eachNode
+        <span class="apidocSignatureSpan">(lambda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eachNode = function (lambda) {
+    traverse(this.topLevelNode, lambda);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    },
+
+    eachNode: function (lambda) {
+        traverse(this.topLevelNode, lambda);
+    },
+
+    updateIsUsedByTerm: function (isUsedByTerm) {
+        this.<span class="apidocCodeKeywordSpan">eachNode</span>(function (node) {
+            if (['i', 'v', 'w', 'f', 't', 'n'].indexOf(node.type) !== -
+1) {
+                isUsedByTerm[node.type] = true;
+            }
+        });
+        return isUsedByTerm;
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRule.prototype.toJavaScriptAst" id="apidoc.element.cldr.CldrPluralRule.prototype.toJavaScriptAst">
+        function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>toJavaScriptAst
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJavaScriptAst = function () {
+    return nodeToJavaScriptAst(this.topLevelNode);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    isUsedByTerm = {};
+Object.keys(this.cldrPluralRuleByCount).forEach(function (count) {
+    var cldrPluralRule = this.cldrPluralRuleByCount[count];
+    cldrPluralRule.updateIsUsedByTerm(isUsedByTerm);
+    statementAsts.push(
+        [
+            'if',
+            cldrPluralRule.<span class="apidocCodeKeywordSpan">toJavaScriptAst</span>(),
+            ['return', ['string', count]]
+        ]
+    );
+}, this);
+statementAsts.push(['return', ['string', 'other']]);
+var varAsts = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRule.prototype.updateIsUsedByTerm" id="apidoc.element.cldr.CldrPluralRule.prototype.updateIsUsedByTerm">
+        function <span class="apidocSignatureSpan">cldr.CldrPluralRule.prototype.</span>updateIsUsedByTerm
+        <span class="apidocSignatureSpan">(isUsedByTerm)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateIsUsedByTerm = function (isUsedByTerm) {
+    this.eachNode(function (node) {
+        if (['i', 'v', 'w', 'f', 't', 'n'].indexOf(node.type) !== -1) {
+            isUsedByTerm[node.type] = true;
+        }
+    });
+    return isUsedByTerm;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+toJavaScriptFunctionBodyAst: function () {
+    var statementAsts = [],
+        isUsedByTerm = {};
+    Object.keys(this.cldrPluralRuleByCount).forEach(function (count) {
+        var cldrPluralRule = this.cldrPluralRuleByCount[count];
+        cldrPluralRule.<span class="apidocCodeKeywordSpan">updateIsUsedByTerm</span>(isUsedByTerm);
+        statementAsts.push(
+            [
+                'if',
+                cldrPluralRule.toJavaScriptAst(),
+                ['return', ['string', count]]
+            ]
+        );
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrPluralRuleSet" id="apidoc.module.cldr.CldrPluralRuleSet">module cldr.CldrPluralRuleSet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRuleSet.CldrPluralRuleSet" id="apidoc.element.cldr.CldrPluralRuleSet.CldrPluralRuleSet">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrPluralRuleSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrPluralRuleSet() {
+    this.cldrPluralRuleByCount = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrPluralRuleSet.prototype" id="apidoc.module.cldr.CldrPluralRuleSet.prototype">module cldr.CldrPluralRuleSet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRuleSet.prototype.addRule" id="apidoc.element.cldr.CldrPluralRuleSet.prototype.addRule">
+        function <span class="apidocSignatureSpan">cldr.CldrPluralRuleSet.prototype.</span>addRule
+        <span class="apidocSignatureSpan">(cldrPluralRule, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRule = function (cldrPluralRule, count) {
+    if (typeof cldrPluralRule === 'string') {
+        cldrPluralRule = cldrPluralRule.replace(/\s*@(?:decimal|integer).*$/, '');
+        // Some count="other" nodes in CLDR 24+ consist purely of sample text.
+        // Don't add those.
+        if (cldrPluralRule.length === 0) {
+            return;
+        }
+        cldrPluralRule = new CldrPluralRule(cldrPluralRule);
+    }
+    this.cldrPluralRuleByCount[count] = cldrPluralRule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrPluralRuleSet.prototype.toJavaScriptFunctionBodyAst" id="apidoc.element.cldr.CldrPluralRuleSet.prototype.toJavaScriptFunctionBodyAst">
+        function <span class="apidocSignatureSpan">cldr.CldrPluralRuleSet.prototype.</span>toJavaScriptFunctionBodyAst
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJavaScriptFunctionBodyAst = function () {
+    var statementAsts = [],
+        isUsedByTerm = {};
+    Object.keys(this.cldrPluralRuleByCount).forEach(function (count) {
+        var cldrPluralRule = this.cldrPluralRuleByCount[count];
+        cldrPluralRule.updateIsUsedByTerm(isUsedByTerm);
+        statementAsts.push(
+            [
+                'if',
+                cldrPluralRule.toJavaScriptAst(),
+                ['return', ['string', count]]
+            ]
+        );
+    }, this);
+    statementAsts.push(['return', ['string', 'other']]);
+    var varAsts = [];
+
+    ['i', 'v', 'w', 'f', 't'].forEach(function (term) {
+        if (isUsedByTerm[term]) {
+            varAsts.push([term, uglifyJs.parser.parse(cldrPluralRuleTermFunctionByName[term].toString())[1][0][3][0][1]]);
+        }
+    });
+
+    if (Object.keys(isUsedByTerm).length !== 0) {
+        statementAsts.unshift(
+            // if (typeof n === 'string') n = parseInt(n, 10);
+            [ 'if',
+                [ 'binary',
+                    '===',
+                    [ 'unary-prefix', 'typeof', [ 'name', 'n' ] ],
+                    [ 'string', 'string' ] ],
+                [ 'stat',
+                    [ 'assign',
+                        true,
+                      [ 'name', 'n' ],
+                        [ 'call',
+                        [ 'name', 'parseInt' ],
+                        [ [ 'name', 'n' ], [ 'num', 10 ] ] ] ] ],
+                undefined ]
+        );
+    }
+
+    if (varAsts.length &gt; 0) {
+        statementAsts.unshift(['var', varAsts]);
+    }
+    return statementAsts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrRbnfRuleSet" id="apidoc.module.cldr.CldrRbnfRuleSet">module cldr.CldrRbnfRuleSet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrRbnfRuleSet.CldrRbnfRuleSet" id="apidoc.element.cldr.CldrRbnfRuleSet.CldrRbnfRuleSet">
+        function <span class="apidocSignatureSpan">cldr.</span>CldrRbnfRuleSet
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CldrRbnfRuleSet(config) {
+    _.extend(this, config);
+    this.ruleByValue = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrRbnfRuleSet.getSafeRendererName" id="apidoc.element.cldr.CldrRbnfRuleSet.getSafeRendererName">
+        function <span class="apidocSignatureSpan">cldr.CldrRbnfRuleSet.</span>getSafeRendererName
+        <span class="apidocSignatureSpan">(rendererName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSafeRendererName = function (rendererName) {
+    return (
+        ('render-' + rendererName)
+        .replace(/[^\w-]/g, '-')
+        .replace(/[-_]+([0-9a-z])/gi, function ($0, ch) {
+            return ch.toUpperCase();
+        })
+        .replace('GREEKNUMERALMAJUSCULES', 'GreekNumeralMajuscules')
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+// FIXME: &gt;&gt;&gt; not supported
+
+// The substitution descriptor (i.e., the text between the token characters) may take one of three forms:
+if (otherFormat) {
+    // A rule set name:
+    // Perform the mathematical operation on the number, and format the result using the named rule set.
+    var otherFormatName = CldrRbnfRuleSet.<span class="apidocCodeKeywordSpan">getSafeRendererName</span>(otherFormat);
+    isSeenByRuleSetType[otherFormatName] = true;
+    // Turn into this.&lt;otherFormatName&gt;(&lt;expr&gt;)
+    expressionAsts.push(['call', ['dot', ['name', 'this'], otherFormatName], [expr]]);
+} else if (decimalFormat) {
+    // A DecimalFormat pattern:
+    // Perform the mathematical operation on the number, and format the result using a DecimalFormat
+    // with the specified pattern. The pattern must begin with 0 or #.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.CldrRbnfRuleSet.prototype" id="apidoc.module.cldr.CldrRbnfRuleSet.prototype">module cldr.CldrRbnfRuleSet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.CldrRbnfRuleSet.prototype.toFunctionAst" id="apidoc.element.cldr.CldrRbnfRuleSet.prototype.toFunctionAst">
+        function <span class="apidocSignatureSpan">cldr.CldrRbnfRuleSet.prototype.</span>toFunctionAst
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toFunctionAst = function () {
+    var that = this,
+        isSeenByRuleSetType = {};
+
+    function ruleToExpressionAst(rule) {
+        var expressionAsts = [],
+            rbnf = rule.rbnf;
+
+        // "If a rule body begins with an apostrophe, the apostrophe is ignored, but all text after it becomes
+        // significant (this is how you can have a rule's rule text begin with whitespace)."
+        // -- http://www.icu-project.org/apiref/icu4c/classRuleBasedNumberFormat.html
+        rbnf = rbnf.replace(/^'/, '');
+
+        rule.radix = rule.radix || 10;
+
+        function getDivisor() {
+            var divisor = 1;
+            while (10 * divisor &lt;= parseInt(rule.value, 10)) { // Inefficient, but won't suffer from Math.log rounding errors
+                divisor *= 10;
+            }
+            return divisor;
+        }
+
+        // Replace is used for tokenization, the return value isn't used:
+        rbnf.replace(/(?:([\&lt;\&gt;\=])(?:(%%?[\w\-]+)|([#,0.]+))?\1)|(?:\[([^\]]+)\])|([\x7f-\uffff:'\.\s\w\d\-]+|(?:\$\((cardinal|
+ordinal),([^\)]+)\)))/gi, function ($0, specialChar, otherFormat, decimalFormat, optional, literal, cardinalOrOrdinal, dollarRule) {
+            // The meanings of the substitution token characters are as follows:
+            if (dollarRule) {
+                var callAst = ['call', ['function', null, [ 'n' ], cardinalOrOrdinal === 'cardinal' ? that.cardinalPluralRuleAst
+ : that.ordinalPluralRuleAst], [ [ 'name', 'n' ] ] ];
+                var objAst = ['object', [] ];
+                dollarRule.split('}').forEach(function (fragment) {
+                    var pluralCaseAndValue = fragment.split('{');
+                    if (pluralCaseAndValue.length === 2) {
+                        objAst[1].push([pluralCaseAndValue[0], ['string', pluralCaseAndValue[1]]]);
+                    }
+                });
+                expressionAsts.push(['sub', objAst, callAst]);
+            } else if (specialChar) {
+                var expr;
+                if (specialChar === '&lt;') { // &lt;&lt;
+                    if (/^\d+$/.test(rule.value)) {
+                        // In normal rule: Divide the number by the rule's divisor and format the quotient
+                        expr = ['call', ['dot', ['name', 'Math'], 'floor'], [['binary', '/', ['name', 'n'], ['num', getDivisor()]]]];
+                    } else if (rule.value === '-x') {
+                        throw new Error('&lt;&lt; not allowed in negative number rule');
+                    } else {
+                        // In fraction or master rule: Isolate the number's integral part and format it.
+                        expr = ['call', ['dot', ['name', 'Math'], 'floor'], [['name', 'n']]];
+                    }
+                } else if (specialChar === '&gt;') { // &gt;&gt;
+                    if (/\./.test(rule.value)) {
+                        // Fraction or master rule =&gt; parseInt(String(n).replace(/\d*\./, ''), 10)
+                        expr = ['call', ['name', 'parseInt'], [['call', ['dot', ['call', ['name', 'String'], [['name', 'n']]], '
+replace'], [['regexp', '\\d*\\.', ''], ['string', '']]], ['num', 10]]];
+                    } else if (rule.value === '-x') {
+                        expr = ['unary-prefix', '-', ['name', 'n']];
+                    } else {
+                        expr = ['binary', '%', ['name', 'n'], ['num', getDivisor()]];
+                    }
+                } else if (specialChar === '=') { // ==
+                    expr = ['name', 'n'];
+                }
+                // FIXME: &gt;&gt;&gt; not supported
+
+                // The substitution descriptor (i.e., the text between the token characters) may take one of three forms:
+                if (otherFormat) {
+                    // A rule set name:
+                    // Perform the mathematical operation on the number, and format the result using the named rule set.
+                    var otherFormatName = CldrRbnfRuleSet.getSafeRendererName(otherFormat);
+                    isSeenByRuleSetType[otherFormatName] = true;
+                    // Turn into this.&lt;otherFormatName&gt;(&lt;expr&gt;)
+                    expressionAsts.push(['call', ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cldr.cldrPluralRuleTermFunctionByName" id="apidoc.module.cldr.cldrPluralRuleTermFunctionByName">module cldr.cldrPluralRuleTermFunctionByName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.f" id="apidoc.element.cldr.cldrPluralRuleTermFunctionByName.f">
+        function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>f
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function f(n) {
+    return parseInt(n.toString().replace(/^[^.]*\.?/, ''), 10) || 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.i" id="apidoc.element.cldr.cldrPluralRuleTermFunctionByName.i">
+        function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>i
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function i(n) {
+    return Math.floor(Math.abs(n));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.t" id="apidoc.element.cldr.cldrPluralRuleTermFunctionByName.t">
+        function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>t
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function t(n) {
+    return parseInt(n.toString().replace(/^[^.]*\.?|0+$/g, ''), 10) || 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.v" id="apidoc.element.cldr.cldrPluralRuleTermFunctionByName.v">
+        function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>v
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function v(n) {
+    return n.toString().replace(/^[^.]*\.?/, '').length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cldr.cldrPluralRuleTermFunctionByName.w" id="apidoc.element.cldr.cldrPluralRuleTermFunctionByName.w">
+        function <span class="apidocSignatureSpan">cldr.cldrPluralRuleTermFunctionByName.</span>w
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function w(n) {
+    return n.toString().replace(/^[^.]*\.?|0+$/g, '').length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
